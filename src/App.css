@@ -3,6 +3,22 @@
   padding: 0;
 }
 
+.card {
+  margin-left: 0px;
+  margin-bottom: 10% !important;
+}
+
+h3.card-header {
+  font-size: 25px;
+  line-height: 110%;
+  padding-left: 31px !important;
+  font-weight: bold;
+}
+
+#inputSearch {
+  margin-right: 200px !important;
+}
+
 nav {
   background-color: #222;
 }
@@ -66,7 +82,7 @@ img {
   width: 800px !important;
 }
 
-.search {
+.btnSearch {
   margin-left: 40%;
   width: 18%;
   min-width: 23% !important;

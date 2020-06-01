@@ -6,8 +6,8 @@ function Routes(props) {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/home" component={Home}></Route>
-        <Route path="/**" component={Home} />
+        {/* {/* <Route path="/home" component={Home}></Route> */}
+        <Route path="/**" component={Home} /> */}
       </Switch>
     </HashRouter>
   )
