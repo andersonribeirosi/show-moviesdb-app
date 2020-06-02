@@ -12,7 +12,7 @@ const Navbar = () => {
         <ul className="navbar-nav">
           <div className="row">
             <NavbarItem href="#/home" label="BRISAFilmes" />
-            <NavbarItem href="#/movieSearch" label="Buscar Filmes" />
+            {/* <NavbarItem href="#/movieSearch" label="Buscar Filmes" /> */}
           </div>
         </ul>
       </div>

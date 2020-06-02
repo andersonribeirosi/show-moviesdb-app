@@ -4,9 +4,9 @@ function NavbarItem(props) {
 
   return (
     <li className="nav-item">
-      <a className="nav-link"
+      <p className="nav-link"
         href={props.href}>{props.label}
-      </a>
+      </p>
     </li>
   )
 }

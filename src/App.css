@@ -33,6 +33,11 @@ nav {
   bottom: 0px;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 20px;
+}
+
 #footer p {
   margin: 0px;
   text-align: center;
@@ -56,7 +61,7 @@ nav {
 h2 {
   text-align: center;
   padding: 0px;
-  padding-top: 60px;
+  padding-top: 88px;
   font-size: 2rem !important;
   margin-top: -36px !important;
 }

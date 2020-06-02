@@ -5,6 +5,10 @@ import Footer from '../components/Footer'
 import Routes from '../main/Routes'
 import Search from './Search'
 import MovieSearchList from '../components/MovieSearchList'
+import PaginationSearch from '../components/PaginationSearch'
+
+import 'bootswatch/dist/flatly/bootstrap.css'
+import 'materialize-css/dist/css/materialize.min.css'
 
 class App extends Component {
 
@@ -12,7 +16,9 @@ class App extends Component {
     super(props)
     this.state = {
       movies: [],
-      searchMovie: ''
+      searchMovie: '',
+      currentPage: 1,
+      totalResults: 0
     }
     this.apyKey = process.env.REACT_APP_API
   }
@@ -24,7 +30,19 @@ class App extends Component {
       .then(data => {
         console.log(data);
 
-        this.setState({ movies: [...data.results] })
+        this.setState({ movies: [...data.results], totalResults: data.total_Results })
+        // console.log(data.total_results);
+
+      })
+  }
+
+  nextPage = (pageNumber) => {
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apyKey}&query=${this.state.searchMovie}&page=${pageNumber}`)
+      .then(data => data.json())
+      .then(data => {
+        console.log(data);
+
+        this.setState({ movies: [...data.results], currentPage: pageNumber })
       })
   }
 
@@ -33,6 +51,7 @@ class App extends Component {
   }
 
   render() {
+    const numberPages = Math.floor(this.state.totalResults / 20);
     return (
       <>
         <div className="App">
@@ -43,6 +62,9 @@ class App extends Component {
           </div>
           <div>
             <MovieSearchList movies={this.state.movies} />
+          </div>
+          <div>
+            {this.state.totalResults > 10 ? <PaginationSearch pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''};
           </div>
         </div>
         <div className="content">

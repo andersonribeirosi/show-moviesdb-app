@@ -18,6 +18,7 @@ const Search = (props) => {
                     type="text"
                     placeholder="buscar por filmes"
                     onChange={props.handleChange}
+                    required
                   />
                   <button className="btn btn-success" onSubmit={props.handleSubmit}>Pesquisar</button>
                 </div>
