@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Routes from '../main/Routes'
 import Search from './Search'
+import MovieSearchList from '../components/MovieSearchList'
 
 class App extends Component {
 
@@ -33,14 +34,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Routes />
-        <Navbar />
-        <Footer />
-        <div>
-          <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+      <>
+        <div className="App">
+          <Routes />
+          <Navbar />
+          <div>
+            <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+          </div>
+          <div>
+            <MovieSearchList movies={this.state.movies} />
+          </div>
         </div>
-      </div>
+        <div className="content">
+          <Footer className="globalConfig" />
+        </div>
+      </>
     );
   }
 }

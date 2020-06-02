@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <div>
         <div id="slider">
-          <h2><img src={Logo} alt="" /><strong>Seja bem-vindo</strong> - Encontre seu filme favorito</h2>
+          <h2><img id="iconMovieHome" src={Logo} alt="" /><strong>Seja bem-vindo</strong> - Encontre seu filme favorito</h2>
           <div className="clearfix"></div>
           {/* <button className="btn btn-success btnSearch" type="button">Pesquisar</button> */}
         </div>
