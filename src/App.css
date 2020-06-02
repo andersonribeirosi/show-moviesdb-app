@@ -37,14 +37,19 @@ nav {
   margin: 0px;
   text-align: center;
   color: white;
+  margin-top: -2.6% !important;
+}
+
+.col-12 {
+  margin-bottom: 12px;
 }
 
 #slider {
   max-width: 100%;
   background: #245388;
   width: 100%;
-  height: 250px;
-  margin-top: 125px;
+  height: 235px;
+  margin-top: 126px;
   color: white;
 }
 
@@ -53,7 +58,7 @@ h2 {
   padding: 0px;
   padding-top: 60px;
   font-size: 2rem !important;
-  margin-top: -30px !important;
+  margin-top: -36px !important;
 }
 
 #iconMovieHome {
