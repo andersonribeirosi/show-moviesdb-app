@@ -9,7 +9,7 @@ const MovieSearchList = (props) => {
         <div className="col-12">
           {
             props.movies.map((movie, i) => {
-              return <Movie key={i} image={movie.poster_path} />
+              return <Movie key={i} image={movie.poster_path} title={movie.original_title} />
             })
           }
         </div>
