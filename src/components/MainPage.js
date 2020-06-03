@@ -2,13 +2,13 @@ import React from 'react'
 import Logo from '../assets/images/watching-tv.svg'
 import { withRouter } from 'react-router-dom'
 
-class Slider extends React.Component {
+class MainPage extends React.Component {
 
   render() {
     return (
       <div>
         <div id="slider">
-          <h2><img id="iconMovieHome" src={Logo} alt="" /><strong>Seja bem-vindo</strong> - Encontre seu filme favorito</h2>
+          <h2><img id="iconMovie" src={Logo} alt="" /><strong>Seja bem-vindo</strong> - Encontre seu filme favorito </h2>
           <div className="clearfix"></div>
         </div>
       </div>
@@ -16,4 +16,4 @@ class Slider extends React.Component {
   }
 }
 
-export default withRouter(Slider)
+export default withRouter(MainPage)

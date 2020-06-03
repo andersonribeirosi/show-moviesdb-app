@@ -54,7 +54,7 @@ class App extends Component {
 
         </div>
         <div className="content">
-          <Footer className="globalConfig" />
+          <Footer />
         </div>
       </>
     );
