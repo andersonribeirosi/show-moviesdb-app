@@ -1,16 +1,15 @@
 import React from 'react'
 import NavbarItem from '../components/NavbarItem'
-
-
+import BrisanetLogo from '../assets/images/brisanet.png'
 
 const Navbar = () => {
 
   return (
-    <div className="navbar fixed-top navbar-dark bg-primary">
+    <div className="navbar fixed-top navbar-dark">
       <div className="container">
         <ul className="navbar-nav">
           <div className="row">
-            <NavbarItem href="#/home" label="BRISAFilmes" />
+            <img id="logoBrisa" src={BrisanetLogo} alt="" /><NavbarItem href="#/home" label="BRISAFilmes" />
           </div>
         </ul>
       </div>

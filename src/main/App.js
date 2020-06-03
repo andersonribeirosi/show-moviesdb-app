@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../assets/css/Style.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Routes from './Routes'
@@ -33,7 +33,6 @@ class App extends Component {
 
       })
   }
-
 
   handleChange = (e) => {
     this.setState({ searchMovie: e.target.value })

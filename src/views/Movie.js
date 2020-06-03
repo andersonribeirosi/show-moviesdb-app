@@ -17,7 +17,9 @@ const Movie = (props) => {
           </div>
           <div className="card-content">
             <p id="details"><a href="#">Detalhes</a> </p>
-            <p id="average_vote">Nota IMDB: {props.averageVote}</p>
+            <p id="average_vote">Nota IMDB: {props.averageVote} </p>
+            <p id="voteCount">Votos: {props.voteCount}</p>
+            {/* <p></p> */}
           </div>
 
         </div>
