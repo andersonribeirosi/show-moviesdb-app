@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Routes from '../main/Routes'
-import Search from './Search'
+import Routes from './Routes'
+import Search from '../views/Search'
 import MovieSearchList from '../components/MovieSearchList'
 
 import 'bootswatch/dist/flatly/bootstrap.css'
@@ -16,7 +16,6 @@ class App extends Component {
     this.state = {
       movies: [],
       searchMovie: '',
-      currentPage: 1,
       totalResults: 0
     }
     this.apyKey = process.env.REACT_APP_API
@@ -30,7 +29,7 @@ class App extends Component {
         console.log(data);
 
         this.setState({ movies: [...data.results], totalResults: data.total_Results })
-        // console.log(data.total_results);
+        console.log(data.total_results);
 
       })
   }
@@ -41,7 +40,6 @@ class App extends Component {
   }
 
   render() {
-    const numberPages = Math.floor(this.state.totalResults / 20);
     return (
       <>
         <div className="App">

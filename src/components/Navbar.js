@@ -1,8 +1,7 @@
 import React from 'react'
 import NavbarItem from '../components/NavbarItem'
 
-import 'bootswatch/dist/flatly/bootstrap.css'
-import 'materialize-css/dist/css/materialize.min.css'
+
 
 const Navbar = () => {
 
