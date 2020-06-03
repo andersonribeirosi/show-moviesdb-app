@@ -3,10 +3,12 @@ import React from 'react'
 const Movie = (props) => {
   return (
     <>
-      <div className="col s12 m6 l3">
+      <div className="col s12 m6 l4">
         <div className="card">
-          <div className="card-image waves-effect waves-block waves-light">
-            <span id="titleMovie">{props.title}</span>
+          <div className="card-image waves-effect waves-light">
+            <div id="titleMovie">
+              <span id="titleMovie">{props.title}</span>
+            </div>
             {
               props.image === null ? <img src="https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg"
                 alt="" style={{ width: "100%", height: 300 }} /> :
@@ -14,8 +16,10 @@ const Movie = (props) => {
             }
           </div>
           <div className="card-content">
-            <p><a href="#">Detalhes</a></p>
+            <p id="details"><a href="#">Detalhes</a> </p>
+            <p id="average_vote">Nota IMDB: {props.averageVote}</p>
           </div>
+
         </div>
       </div>
     </>

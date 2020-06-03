@@ -5,7 +5,6 @@ import Footer from '../components/Footer'
 import Routes from '../main/Routes'
 import Search from './Search'
 import MovieSearchList from '../components/MovieSearchList'
-import PaginationSearch from '../components/PaginationSearch'
 
 import 'bootswatch/dist/flatly/bootstrap.css'
 import 'materialize-css/dist/css/materialize.min.css'
@@ -36,15 +35,6 @@ class App extends Component {
       })
   }
 
-  nextPage = (pageNumber) => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apyKey}&query=${this.state.searchMovie}&page=${pageNumber}`)
-      .then(data => data.json())
-      .then(data => {
-        console.log(data);
-
-        this.setState({ movies: [...data.results], currentPage: pageNumber })
-      })
-  }
 
   handleChange = (e) => {
     this.setState({ searchMovie: e.target.value })
@@ -63,9 +53,7 @@ class App extends Component {
           <div>
             <MovieSearchList movies={this.state.movies} />
           </div>
-          <div>
-            {this.state.totalResults > 10 ? <PaginationSearch pages={numberPages} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''};
-          </div>
+
         </div>
         <div className="content">
           <Footer className="globalConfig" />

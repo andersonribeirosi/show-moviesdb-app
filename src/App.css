@@ -5,7 +5,16 @@
 
 .card {
   margin-left: 0px;
-  margin-bottom: 10% !important;
+  /* margin-bottom: 10% !important; */
+}
+
+#details {
+  margin-top: -15px;
+  margin-bottom: -2% !important;
+}
+
+.card .card-content p {
+  margin-top: -50px;
 }
 
 h3.card-header {
@@ -49,13 +58,37 @@ nav {
   margin-bottom: 12px;
 }
 
-/* #titleMovie {
+#average_vote {
+  color: #333;
+  margin-bottom: -10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#titleMovie {
   color: #222;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
-  margin: 20px; }*/
+  padding: 5px 0px 5px 0px;
+  margin: 5px;
+  overflow: auto;
+}
 
+.card .card-image {
+  padding-bottom: 4px;
+}
+
+@media only screen and (min-width: 601px) {
+  .row .col.m6 {
+    width: 50%;
+    margin-left: auto;
+    margin-bottom: 14px;
+    left: auto;
+    right: auto;
+  }
+}
 #slider {
   max-width: 100%;
   background: #245388;
