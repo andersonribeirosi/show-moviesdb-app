@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container">
         <ul className="navbar-nav">
           <div className="row">
-            <img id="logoBrisa" src={BrisanetLogo} alt="" /><NavbarItem href="#/home" label="BRISAFilmes" />
+            <img id="logoBrisa" src={BrisanetLogo} alt="" /><NavbarItem href="#" label="BRISAFilmes" />
           </div>
         </ul>
       </div>
