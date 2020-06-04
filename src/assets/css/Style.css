@@ -7,6 +7,10 @@
   margin-left: 0px;
 }
 
+.card-image {
+  width: 100px;
+}
+
 .card .card-content p {
   margin-top: -50px;
 }
@@ -76,7 +80,7 @@ h3.card-header {
 #titleMovie {
   color: #222;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
   padding: 5px 0px 5px 0px;
   margin: 5px;
