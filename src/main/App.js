@@ -53,12 +53,17 @@ class App extends Component {
     this.setState({ currentMovie: null })
   }
 
+  retornaPopulares = (e) => {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <>
         <div className="App">
           <Routes />
           <Navbar />
+
           {this.state.currentMovie == null ? <div>
             <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
             <MovieSearchList viewMovieInfo={this.viewMovieInfo} movies={this.state.movies} />

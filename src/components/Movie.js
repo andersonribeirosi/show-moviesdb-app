@@ -16,7 +16,7 @@ const Movie = (props) => {
             }
           </div>
           <div className="card-content">
-            <p id="details"><a onClick={() => props.viewMovieInfo(props.movieId)}>Detalhes</a> </p>
+            <p id="details"><a onClick={() => props.viewMovieInfo(props.movieId)} href="#">Detalhes</a> </p>
             <p id="average_vote">Nota IMDB: {props.averageVote} </p>
             <p id="voteCount">Votos: {props.voteCount}</p>
           </div>

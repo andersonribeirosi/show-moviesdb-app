@@ -1,5 +1,5 @@
 import React from 'react'
-import Movie from '../views/Movie'
+import Movie from '../components/Movie'
 
 const MovieSearchList = (props) => {
   return (
