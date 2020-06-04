@@ -93,6 +93,17 @@ h3.card-header {
   overflow: auto;
 }
 
+#titleInfo {
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#overview {
+  padding-top: -10px !important;
+  padding-bottom: 30px;
+}
+
 @media only screen and (min-width: 601px) {
   .row .col.m6 {
     width: 50%;
@@ -170,5 +181,8 @@ h2 {
 
 .navbar {
   background-color: #bd3707 !important;
-  /* background-color: #a8360d !important; */
+}
+
+.waves-effect {
+  height: 400px;
 }

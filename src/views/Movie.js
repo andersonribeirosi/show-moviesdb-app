@@ -11,15 +11,14 @@ const Movie = (props) => {
             </div>
             {
               props.image === null ? <img src="https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg"
-                alt="" style={{ width: "100%", height: 300 }} /> :
-                <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="" style={{ width: "100%", height: 300 }} />
+                alt="" style={{ width: "100%", height: 350 }} /> :
+                <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt="" style={{ width: "100%", height: 350 }} />
             }
           </div>
           <div className="card-content">
-            <p id="details"><a href="#">Detalhes</a> </p>
+            <p id="details"><a onClick={() => props.viewMovieInfo(props.movieId)}>Detalhes</a> </p>
             <p id="average_vote">Nota IMDB: {props.averageVote} </p>
             <p id="voteCount">Votos: {props.voteCount}</p>
-            {/* <p></p> */}
           </div>
 
         </div>

@@ -10,6 +10,8 @@ const MovieSearchList = (props) => {
           {
             props.movies.map((movie, i) => {
               return <Movie key={i}
+                viewMovieInfo={props.viewMovieInfo}
+                movieId={movie.id}
                 image={movie.poster_path}
                 title={movie.original_title}
                 averageVote={movie.vote_average}

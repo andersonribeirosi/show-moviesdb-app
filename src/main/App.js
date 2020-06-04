@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Routes from './Routes'
 import Search from '../views/Search'
 import MovieSearchList from '../components/MovieSearchList'
+import MovieInfo from '../components/MovieInfo'
 
 import 'bootswatch/dist/flatly/bootstrap.css'
 import 'materialize-css/dist/css/materialize.min.css'
@@ -16,10 +17,12 @@ class App extends Component {
     this.state = {
       movies: [],
       searchMovie: '',
-      totalResults: 0
+      totalResults: 0,
+      currentMovie: null
     }
     this.apyKey = process.env.REACT_APP_API
   }
+
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -38,17 +41,31 @@ class App extends Component {
     this.setState({ searchMovie: e.target.value })
   }
 
+  viewMovieInfo = (id) => {
+    const filterMovie = this.state.movies.filter(movie => movie.id === id);
+
+    const newCurrentMovie = filterMovie.length > 0 ? filterMovie[0] : null;
+
+    this.setState({ currentMovie: newCurrentMovie })
+  }
+
+  closeMovieInfo = () => {
+    this.setState({ currentMovie: null })
+  }
+
   render() {
     return (
       <>
         <div className="App">
           <Routes />
           <Navbar />
-          <div>
+          {this.state.currentMovie == null ? <div>
             <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
-          </div>
+            <MovieSearchList viewMovieInfo={this.viewMovieInfo} movies={this.state.movies} />
+
+          </div> : <MovieInfo currentMovie={this.state.currentMovie} closeMovieInfo={this.closeMovieInfo} />}
+
           <div>
-            <MovieSearchList movies={this.state.movies} />
           </div>
 
         </div>
