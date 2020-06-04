@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch, HashRouter } from 'react-router-dom'
-import MainPage from '../components/MainPage'
+import MainPage from '../views/MainPage'
 
 function Routes(props) {
   return (

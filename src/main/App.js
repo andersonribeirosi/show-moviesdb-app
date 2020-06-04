@@ -3,9 +3,9 @@ import '../assets/css/Style.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Routes from './Routes'
-import Search from '../views/Search'
-import MovieSearchList from '../components/MovieSearchList'
-import MovieInfo from '../components/MovieInfo'
+import Search from '../views/MovieSearch'
+import MovieSearchList from '../views/MovieList'
+import MovieInfo from '../views/MovieInfo'
 
 import 'bootswatch/dist/flatly/bootstrap.css'
 import 'materialize-css/dist/css/materialize.min.css'
@@ -51,10 +51,6 @@ class App extends Component {
 
   closeMovieInfo = () => {
     this.setState({ currentMovie: null })
-  }
-
-  retornaPopulares = (e) => {
-    e.preventDefault();
   }
 
   render() {
